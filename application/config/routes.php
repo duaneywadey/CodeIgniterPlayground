@@ -56,3 +56,4 @@ $route['translate_uri_dashes'] = FALSE;
 // Routes set by user
 $route['greeting'] = 'Greeting/sayHello';
 $route['greeting/testarray'] = 'Greeting/testArray';
+$route['crud'] = 'Crud/saveRecord';
