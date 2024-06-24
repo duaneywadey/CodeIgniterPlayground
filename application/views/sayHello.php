@@ -6,7 +6,7 @@
 	<title>Document</title>
 </head>
 <body>
-	
+	<h1><?php echo base_url();?></h1>
 	<div class="users">
 		<h1>Users</h1>
 		<ul>
@@ -33,5 +33,15 @@
 		<?php } ?>
 		</ul>
 	</div>
+
+	<div class="candidates">
+		<h1>Candidates</h1>
+		<ul>
+		<?php foreach ($candidates as $col) { ?>
+			<li><?php echo $col->first_name; ?></li>
+		<?php } ?>
+		</ul>
+	</div>
+
 </body>
 </html>

@@ -33,12 +33,14 @@ class Greeting extends CI_Controller {
 		$data['users'] = $this->UserModel->showAllUsers();
 		$data['usersU'] = $this->UserModel->showAllUsersByLetter();
 		$data['choices'] = $this->UserModel->showChoices();
+		$data['candidates'] = $this->UserModel->showCandidatesByCategory();
 		$this->load->view('sayHello', $data);
 	}
 
 	public function testArray()
 	{
 		$data['todo_list'] = array('Clean House', 'Call Mom', 'Run Errands');
+		$data['candidates'] = $this->UserModel->showCandidatesByCategory();
 		$this->load->view('testArray', $data);
 	}
 

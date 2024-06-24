@@ -29,10 +29,10 @@ class Crud extends CI_Controller {
 
 	public function saveRecord()
 	{
-		$this->load->view('insert');
 		if ($this->input->post('save')) {
 			$data['title'] = $this->input->post('title');
 			$data['description'] = $this->input->post('description');
+			$data['name'] = $this->input->post('name');
 			$response = $this->CrudModel->saveRecord($data);
 			if($response) {
 				echo "Inserted successfully!";
@@ -41,6 +41,8 @@ class Crud extends CI_Controller {
 				echo "You failed";
 			}
 		}
+		$data['records'] = $this->CrudModel->viewAllRecords();
+		$this->load->view('insert', $data);
 	}
 
 
